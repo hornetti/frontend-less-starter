@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		watch: {
 			less: {
 				files: [ 'source/less/*.less' ],
-				tasks: [ 'less', 'autoprefixer', 'cssmin' ]
+				tasks: [ 'less', 'autoprefixer', 'cssmin', 'htmlmin' ]
 			},
 		},
 		browserSync: {
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 
 	// configurare uglifyjs per la minificazione del javascript
 
-	// grunt.registerTask('start', ['default', 'browserSync', 'watch']);
+	grunt.registerTask('start', ['default', 'browserSync', 'watch']);
 	// rivedere il registerTask start per mancanza di sincronizzazione dei file html
 	
 	grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'htmlmin']);
