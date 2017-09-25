@@ -17,7 +17,15 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'build/index.html': 'source/*.html'
+					'build/1-i-miei-dati.html': 'source/1-i-miei-dati.html',
+					'build/2-accesso-al-primo-anno.html': 'source/2-accesso-al-primo-anno.html',
+					'build/3-secondo-anno-no-accesso.html': 'source/3-secondo-anno-no-accesso.html',
+					'build/4-accesso-al-secondo-anno.html': 'source/4-accesso-al-secondo-anno.html',
+					'build/5-iscrizione-pacchetto-effettuata.html': 'source/5-iscrizione-pacchetto-effettuata.html',
+					'build/6-seleziona-centro.html': 'source/6-seleziona-centro.html',
+					'build/7-riepilogo-per-conferma-finale.html': 'source/7-riepilogo-per-conferma-finale.html',
+					'build/8-thanksyou-confermata.html': 'source/8-thanksyou-confermata.html',
+					'build/9-thanksyou-errore.html': 'source/9-thanksyou-errore.html'
 				}
 			},
 		},
