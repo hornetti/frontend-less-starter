@@ -17,15 +17,7 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'build/1-i-miei-dati.html': 'source/1-i-miei-dati.html',
-					'build/2-accesso-al-primo-anno.html': 'source/2-accesso-al-primo-anno.html',
-					'build/3-secondo-anno-no-accesso.html': 'source/3-secondo-anno-no-accesso.html',
-					'build/4-accesso-al-secondo-anno.html': 'source/4-accesso-al-secondo-anno.html',
-					'build/5-iscrizione-pacchetto-effettuata.html': 'source/5-iscrizione-pacchetto-effettuata.html',
-					'build/6-seleziona-centro.html': 'source/6-seleziona-centro.html',
-					'build/7-riepilogo-per-conferma-finale.html': 'source/7-riepilogo-per-conferma-finale.html',
-					'build/8-thanksyou-confermata.html': 'source/8-thanksyou-confermata.html',
-					'build/9-thanksyou-errore.html': 'source/9-thanksyou-errore.html'
+					'build/index.html': 'source/index.html',
 				}
 			},
 		},
@@ -43,15 +35,22 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		uglify: {
+			my_target: {
+				files: {
+				'build/js/luxottica.min.js': ['source/js/luxottica.js']
+				}
+			}
+		},
 		watch: {
 			less: {
 				files: [ 'source/less/*.less' ],
-				tasks: [ 'less', 'autoprefixer', 'cssmin', 'htmlmin' ]
+				tasks: [ 'less', 'autoprefixer', 'cssmin', 'htmlmin', 'uglify' ]
 			},
 		},
 		browserSync: {
 			bsFiles: {
-				src: [ 'build/css/*.css', 'build/*.html']
+				src: [ 'build/css/*.css', 'build/js/*.js', 'build/*.html']
 			},
 			options: {
 				watchTask: true,
@@ -69,11 +68,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// configurare uglifyjs per la minificazione del javascript
 
 	grunt.registerTask('start', ['default', 'browserSync', 'watch']);
 	// rivedere il registerTask start per mancanza di sincronizzazione dei file html
 	
-	grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'htmlmin']);
+	grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'htmlmin', 'uglify']);
 };
