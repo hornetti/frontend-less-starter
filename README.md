@@ -1,5 +1,5 @@
 # grunt-script
-Grunt script to convert and compress Less file into CSS file and minifing HTML file.
+Grunt script to convert and compress Less files into CSS files, compress HTML files, build and minifing JS files.
 
 ## Install
 
@@ -29,7 +29,7 @@ after that install all the dependencies:
 
 To run grunt-script on your command line:
 
-`grunt`
+`grunt` or `grunt start` for watch task
 
 grunt-script will convert your files *from* **'source' folder** *to* **'build' folder**.
 
