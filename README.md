@@ -32,14 +32,3 @@ To run grunt-script on your command line:
 `grunt` or `grunt start` for watch task
 
 grunt-script will convert your files *from* **'source' folder** *to* **'build' folder**.
-
-<!--
-
-## Credits
-
-TODO: Write credits
-
-## License
-
-TODO: Write license
--->
