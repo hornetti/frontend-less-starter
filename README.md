@@ -32,3 +32,25 @@ To run grunt-script on your command line:
 `grunt` or `grunt start` for watch task
 
 grunt-script will convert your files *from* **'source' folder** *to* **'build' folder**.
+
+## Web tecnologies: 
+* npm
+* grunt
+* html
+* less
+* javascript
+* grunt-plugins
+	
+	* htmlmin
+
+	* less
+
+	* autoprefixer
+	
+	* cssmin
+	
+	* uglifyjs
+
+	* browser-sync
+	
+	* watch
