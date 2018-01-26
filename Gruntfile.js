@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-				'build/js/luxottica.min.js': ['source/js/luxottica.js']
+				'build/js/function.min.js': ['source/js/function.js']
 				}
 			}
 		},
