@@ -1,19 +1,19 @@
-# grunt-script
+# frontend-less-starter
 Grunt script to convert and compress Less files into CSS files, compress HTML files, build and minifing JS files.
 
 ## Install
 
-To install grunt-script you have to install [node](https://nodejs.org/it/) and [git](https://git-scm.com/) first.
+To install frontend-less-starter you have to install [node](https://nodejs.org/it/) and [git](https://git-scm.com/) first.
 
 clone the Repo
 
-`git clone https://github.com/hornetti/grunt-script.git`
+`git clone https://github.com/hornetti/frontend-less-starter.git`
 
-and change directory into grunt-script
+and change directory into frontend-less-starter
 
-`cd grunt-script`
+`cd frontend-less-starter`
 
-then install npm 
+then install npm
 
 `npm install npm -g`
 
@@ -27,11 +27,11 @@ after that install all the dependencies:
 
 ## Usage
 
-To run grunt-script on your command line:
+To run frontend-less-starter on your command line:
 
 `grunt` or `grunt start` for watch task
 
-grunt-script will convert your files *from* **'source' folder** *to* **'build' folder**.
+frontend-less-starter will convert your files *from* **'source' folder** *to* **'build' folder**.
 
 ## Web tecnologies: 
 * npm
